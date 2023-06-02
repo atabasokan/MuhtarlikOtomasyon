@@ -1,0 +1,46 @@
+﻿@{
+    var item = ViewData["user"] as User;
+}
+<div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col">
+                <div class="card mb-4">
+                    <div class="card-header"><strong>Nüfus Cüzdan</strong><span class="small ms-1"> Bilgileri</span></div>
+                    <div class="card-body">
+                        <div class="example">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item" align="center">
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"></span>
+                                        <input class="form-control" type="text" placeholder="@(item.Ad +" "+ item.Soyad)" aria-label="Tam Ad" aria-describedby="basic-addon1" readonly>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"></span>
+                                        <input class="form-control" type="text" placeholder="@item.Tc_no" aria-label="Tc No" aria-describedby="basic-addon1" readonly>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"></span>
+                                        <input class="form-control" type="text" placeholder="@item.Anne_Adı" aria-label="Anne Adı" aria-describedby="basic-addon1" readonly>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"></span>
+                                        <input class="form-control" type="text" placeholder="@item.Baba_Adı" aria-label="Baba Adı" aria-describedby="basic-addon1" readonly>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"></span>
+                                        <input class="form-control" type="text" placeholder="@item.Doğum_Tarihi.ToString("dd/MM/yyyy")" aria-label="Doğum Yeri" aria-describedby="basic-addon1" readonly>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="basic-addon1"></span>
+                                        <input class="form-control" type="text" placeholder="@item.Doğum_Yeri" aria-label="Doğum Yeri" aria-describedby="basic-addon1" readonly>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

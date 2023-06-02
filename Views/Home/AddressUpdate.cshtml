@@ -1,0 +1,39 @@
+﻿@{
+    var item = ViewData["user"] as User;
+}
+@model MuhtarlıkOtomasyon.Models.User
+<div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col">
+                <div class="card mb-4">
+                    <div class="card-header"><strong>İkametgah</strong><span class="small ms-1"> Bilgileri</span></div>
+                    <div class="card-body" style="width:100%;">
+                        @using (Html.BeginForm("AddressUpdate", "Home", FormMethod.Post))
+                        {
+                            <div class="example">
+                                <ul class="nav nav-tabs" role="tablist" style="place-content:center;">
+                                    <li class="nav-item" style="width:100%">
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1"></span>
+                                            <textarea asp-for="Adres" class="form-control" aria-label="With textarea" placeholder="@item.Adres">@item.Adres</textarea>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item" style="width:100%">
+                                        <div class="input-group mb-3">
+                                            <input asp-for="Mahalle" class="form-control" type="text" value="@item.Mahalle" />
+                                        </div>
+                                    </li>
+                                    <li class="nav-item mb-3" >
+                                        <button class="btn btn-outline-success" type="submit">Güncelle</button>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
